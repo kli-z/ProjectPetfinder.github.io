@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no"/>
-    <link rel="stylesheet" media="screen" href="screen.css" />
+    <link rel="stylesheet" media="screen" href="css/screen.css" />
     <title>Project Petfinder</title>
   </head>
 
@@ -21,7 +21,7 @@
       Search by Location
         <form id="search-location" name="search-location" method="get">
           <label for="search">Zipcode:</label>
-          <input type="search" id="searchlocation" name="searchlocation" />
+          <input type="search" id="searchlocation" name="searchlocation" placeholder="Ex. Chicago, IL or 60616" />
           <input type="submit" id="search-location-submit" name="search-location-submit" />
         </form>
       </p>
@@ -32,8 +32,18 @@
       Search by Animal Type
         <form id="search-animal-type" name="search-animal-type" method="get">
           <label for="search">Animal Type:</label>
-          <input type="search" id="searchanimaltype" name="searchanimaltype" />
-          <input type="submit" id="search-animal-type-submit" name="search-animal-type-submit" />
+          <select id="animal-type">
+            <option value="any">Any</option>
+            <option value="dog">Dog</option>
+            <option value="cat">Cat</option>
+            <option value="rabbit">Rabbit</option>
+            <option value="smallfurry">Small & Furry</option>
+            <option value="horse">Horse</option>
+            <option value="bird">Bird</option>
+            <option value="scalesfinsother">Scales, Fins, & Others</option>
+            <option value="pig">Pig</option>
+            <option value="barnyard">Barnyard</option>
+          </select>
         </form>
       </p>
       <article id="content2">
@@ -49,6 +59,14 @@
       </p>
       <article id="content3">
       </article>
+    </main>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/site.js"></script>
+    
+    <footer>
+      <p>Site created by Emma, Steve, and Zachary</p>
+    </footer>
       
   </body>
 
