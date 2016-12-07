@@ -1,7 +1,7 @@
 //site.js
 //Javascript file for ProjectPetfinder that queries the Petfinder database.
 
-alert("Compiled");
+console.log("Compiled");
 
 $.noConflict(); //reserve $ namespace
 (
@@ -18,13 +18,12 @@ $.noConflict(); //reserve $ namespace
           "&location=" + specifics[0] + "&animal=" + specifics[1] + "&breed=" + specifics[2] +
           "&count=2&output=full&format=json";
 
-        alert("Form submitted.\nqueryURL: " + queryURL + "\n\nSending query now.");
+        console.log("Form submitted.\nqueryURL: " + queryURL + "\n\nSending query now.");
 
-        alert("asdf");
-        $.get('https://api.github.com/users/karlstolley',function(data) {
-          alert("BOX!");
+        $.ajax({url: queryURL,dataType: 'jsonp'}).done(function(data) {
+          console.log(data.petfinder.pets.pet[0]);
         });
-        alert("Query sent.");
+        console.log("Query sent.");
       });
     });
   }
