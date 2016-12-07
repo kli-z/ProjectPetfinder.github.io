@@ -17,7 +17,7 @@ $.noConflict(); //reserve $ namespace
         response = function() {
           $.ajax ({
             type: "GET", url: queryURL
-          
+          });
         }
       });
     });
