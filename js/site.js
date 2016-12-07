@@ -2,18 +2,18 @@
 //Javascript file for ProjectPetfinder that queries the Petfinder database.
 
 $.noConflict(); //reserve $ namespace
-
 (
   function($) {
-    $(document).ready (function() {
-      $('#search').on('submit', function(event) {
-        if $(#searchlocation).val().length === 0) { //if zipcode field is blank
-          alert("Please enter a zipcode.");
-          //return -1; //Exit this function -- we shouldn't submit like this
+    $(document).ready(function() {
+      $('#formpetfinder').on('submit', function(event) {
+
+        /*if $('#searchlocation').val() === "") { //if zipcode field is blank
+          //$('label').append('<b>Required</b>');
         }
         else {
-          alert("Everything is fine, " + $(#searchlocation).val() + " right?");
-        }
+          //$('label').append('<b>Accepted</b>');
+        }*/
+
         event.preventDefault();
       });
     });
