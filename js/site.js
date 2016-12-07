@@ -16,7 +16,7 @@ $.noConflict(); //reserve $ namespace
         //note the single quotes below for the get request
         queryURL = "http://api.petfinder.com/pet.find?key=" + APIkey +
           "&location=" + specifics[0] + "&animal=" + specifics[1] + "&breed=" + specifics[2] +
-          "&count=2&output=full&format=json";
+          "&count=5&output=full&format=json";
 
         console.log("Form submitted.\nqueryURL: " + queryURL + "\n\nSending query now.");
 
