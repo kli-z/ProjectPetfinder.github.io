@@ -12,9 +12,10 @@ $.noConflict(); //reserve $ namespace
 
       $("#formpetfinder").on("submit", function(event) {
         event.preventDefault(); //prevents submit from reloading page and dumping stuff into the URL
+        $('#content').empty();
         var specifics = [$("#searchlocation").val(), $("#searchanimal").val(), $("#searchbreed").val()];
         var count = 5;
-        queryURL = "https://api.petfinder.com/pet.find?key=" + APIkey +
+        var queryURL = "https://api.petfinder.com/pet.find?key=" + APIkey +
           "&location=" + specifics[0] + "&animal=" + specifics[1] + "&breed=" + specifics[2] +
           "&count=" + count + "&output=full&format=json";
 
