@@ -17,4 +17,5 @@ html {
 }
 label {
   line-height: 3em;
+  display: block;
 }
