@@ -13,15 +13,18 @@ h1 {
   text-align: center;
   padding: 1em 0em 0em 0em;
 }
-h2 { 
-  color: #ffffff;
-  text-align: center; 
+h2 {
+  color: #eeeeee;
+  font-family: Palatino, cursive;
   font-size: 1em;
-  padding: 0em 0em 1em 0em;
+  font-style: italic;
   margin: auto;
+  padding: 0em 0em 1em 0em;
+  text-align: center; 
 }
 header {
   background: #723838;
+  font-family: Helvetica;
 }
 html {
   background: #cbec80;
