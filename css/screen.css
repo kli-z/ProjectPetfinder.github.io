@@ -16,7 +16,7 @@ html {
   background: #cbec80;
 }
 label[for="searchlocation"] {
-   padding:1em;
+   margin:2em;
 }
 
 label[for="searchanimal"] {
