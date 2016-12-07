@@ -7,7 +7,7 @@ h2 {
   color: #ffffff;
   text-align: center; 
   font-size: 1em;
-  padding: .25em;
+  padding: 0em 0em 1em 0em;
 }
 header {
   background: #723838;
@@ -17,6 +17,6 @@ html {
 }
 #formpetfinder {
   
-  margin: 2.5em;
+  margin: 1em 0em 1em 0em;
   
 }
