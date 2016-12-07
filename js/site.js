@@ -7,9 +7,12 @@ $.noConflict(); //reserve $ namespace
   function($) {
     $(document).ready (function() {
       $('#search').on('submit', function(event) {
-        if (#searchlocation.value === "") { //if zipcode field is blank
+        if $(#searchlocation).val().length === 0) { //if zipcode field is blank
           alert("Please enter a zipcode.");
-          return -1; //Exit this function -- we shouldn't submit like this
+          //return -1; //Exit this function -- we shouldn't submit like this
+        }
+        else {
+          alert("Everything is fine, " + $(#searchlocation).val() + " right?");
         }
         event.preventDefault();
       });
