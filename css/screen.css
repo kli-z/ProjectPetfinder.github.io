@@ -15,8 +15,14 @@ header {
 html {
   background: #cbec80;
 }
-#formpetfinder {
-  
-  margin: 1em 0em 1em 0em;
-  
+label[for="searchlocation"] {
+   padding:1em;
+}
+
+label[for="searchanimal"] {
+   padding: 1em;
+}
+
+label[for="searchbreed"] {
+   padding: 1em;
 }
