@@ -18,7 +18,5 @@ html {
 label {
   line-height: 2em;
   display: block;
-}
-formpetfinder {
-    margin: auto 0;
+  margin: auto;
 }
