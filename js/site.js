@@ -14,7 +14,7 @@ $.noConflict(); //reserve $ namespace
         event.preventDefault(); //prevents submit from reloading page and dumping stuff into the URL
         var specifics = [$('#searchlocation').val(), $("#searchanimal").val(), $("#searchbreed").val()];
         //note the single quotes below for the get request
-        queryURL = "http://api.petfinder.com/pet.find?key=" + APIkey +
+        queryURL = "https://api.petfinder.com/pet.find?key=" + APIkey +
           "&location=" + specifics[0] + "&animal=" + specifics[1] + "&breed=" + specifics[2] +
           "&count=5&output=full&format=json";
 
