@@ -30,6 +30,7 @@ html {
   background: #cbec80;
 }
 label {
+  font-family: 'Oxygen', sans-serif;
   line-height: 2em;
   display: block;
   margin: auto;
