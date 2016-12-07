@@ -18,27 +18,44 @@ $.noConflict(); //reserve $ namespace
           "&location=" + specifics[0] + "&animal=" + specifics[1] + "&breed=" + specifics[2] +
           "&count=" + count + "&output=full&format=json";
 
-        console.log("Form submitted.");
-
         $.ajax({url: queryURL,dataType: 'jsonp'}).done(function(data) {
           var len = data.petfinder.pets.pet.length; //this is NOT the same as $count; might ask for 25 pets and only get 2
 
           for(var i=0;i<len;i++) {
-            console.log("\n\n\nPet #" + (i+1)); //human readable numbers are not zero-based
-            var tmpStatus = data.petfinder.pets.pet[i].status.$t;if(tmpStatus === 'A'){tmpStatus = "Active";}console.log(tmpStatus);
-            var tmpContactPhone = data.petfinder.pets.pet[i].contact.phone.$t;console.log(tmpContactPhone);
-            var tmpContactState = data.petfinder.pets.pet[i].contact.state.$t;console.log(tmpContactState);
-            var tmpContactEmail = data.petfinder.pets.pet[i].contact.email.$t;console.log(tmpContactEmail);
-            var tmpName = data.petfinder.pets.pet[i].name.$t;console.log(tmpName);
-            var tmpSex = data.petfinder.pets.pet[i].sex.$t;console.log(tmpSex);
-            var tmpDesc = data.petfinder.pets.pet[i].description.$t;console.log(tmpDesc);
-            var tmpID = data.petfinder.pets.pet[i].id.$t;console.log(tmpID);
-            var tmpShelterID = data.petfinder.pets.pet[i].shelterPetId.$t;console.log(tmpShelterID);
+            $("#content").append("<h3>Pet #" + (i+1) + "</h3>"); //human readable numbers are not zero-based
+            var tmpContactPhone = data.petfinder.pets.pet[i].contact.phone.$t;
+            var tmpContactState = data.petfinder.pets.pet[i].contact.state.$t;
+            var tmpContactEmail = data.petfinder.pets.pet[i].contact.email.$t;
+            var tmpContactZip = data.petfinder.pets.pet[i].contact.zip.$t;
+            var tmpContactCity = data.petfinder.pets.pet[i].contact.city.$t;
+            var tmpStatus = data.petfinder.pets.pet[i].status.$t;if(tmpStatus === 'A'){tmpStatus = "Active";}
+            var tmpName = data.petfinder.pets.pet[i].name.$t;
+            var tmpSex = data.petfinder.pets.pet[i].sex.$t;
+            var tmpDesc = data.petfinder.pets.pet[i].description.$t;
+            var tmpID = data.petfinder.pets.pet[i].id.$t;
+            var tmpShelterID = data.petfinder.pets.pet[i].shelterPetId.$t;
+            var tmpAge = data.petfinder.pets.pet[i].age.$t;
 
+            $("#content").append(
+              "<h4>Pet Info</h4>" +
+              "<ul id=\"petInfo\">" +
+                "<li>Name: " + tmpName + "</li>" +
+                "<li>Age: " + tmpAge + "</li>" +
+                "<li>Sex: " + tmpSex + "</li>" +
+                "<li>Status: " + tmpStatus + "</li>" +
+                "<li>ID: " + tmpID + "</li>" +
+                "<li>Shelter ID: " + tmpShelterID + "</li>" +
+                "<li>Desc: " + tmpDesc + "</li>" +
+              "</ul>"
+              "<h4>Contact Info</h4>" +
+              "<ul id=\"petContactInfo\">" +
+                "<li>Location: " + tmpContactCity + ", " + tmpContactState + ", " + tmpContactZip + "</li>" +
+                "<li>Email: " + tmpContactEmail + "</li>" +
+                "<li>Phone: " + tmpContactPhone + "</li>" +
+              "</ul>"
+            );
           }
-          
         });
-        console.log("Query sent.");
       });
     });
   }
