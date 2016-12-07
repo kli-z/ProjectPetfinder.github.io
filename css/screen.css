@@ -18,5 +18,7 @@ html {
 label {
   line-height: 3em;
   display: block;
-  margin: auto 0;
+}
+form {
+    margin: auto 0;
 }
