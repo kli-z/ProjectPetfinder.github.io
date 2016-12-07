@@ -14,20 +14,16 @@ $.noConflict(); //reserve $ namespace
         event.preventDefault(); //prevents submit from reloading page and dumping stuff into the URL
         var specifics = [$('#searchlocation').val(), $("#searchanimal").val(), $("#searchbreed").val()];
         //note the single quotes below for the get request
-        queryURL = "'http://api.petfinder.com/pet.find?key=" + APIkey +
+        queryURL = "http://api.petfinder.com/pet.find?key=" + APIkey +
           "&location=" + specifics[0] + "&animal=" + specifics[1] + "&breed=" + specifics[2] +
-          "&count=2&output=full&format=json'";
+          "&count=2&output=full&format=json";
 
         alert("Form submitted.\nqueryURL: " + queryURL + "\n\nSending query now.");
 
-        response = function() {
-          $.get(
-            queryURL,
-            function(data) {
-              alert("BOX!");
-            }
-          );
-        }
+        alert("asdf");
+        $.get('https://api.github.com/users/karlstolley',function(data) {
+          alert("BOX!");
+        });
         alert("Query sent.");
       });
     });
