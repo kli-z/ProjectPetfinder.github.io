@@ -18,4 +18,5 @@ html {
 label {
   line-height: 3em;
   display: block;
+  margin: auto 0;
 }
