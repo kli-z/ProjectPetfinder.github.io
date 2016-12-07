@@ -13,15 +13,30 @@ $.noConflict(); //reserve $ namespace
       $("#formpetfinder").on("submit", function(event) {
         event.preventDefault(); //prevents submit from reloading page and dumping stuff into the URL
         var specifics = [$('#searchlocation').val(), $("#searchanimal").val(), $("#searchbreed").val()];
-        //note the single quotes below for the get request
+        var count = 5;
         queryURL = "https://api.petfinder.com/pet.find?key=" + APIkey +
           "&location=" + specifics[0] + "&animal=" + specifics[1] + "&breed=" + specifics[2] +
-          "&count=5&output=full&format=json";
+          "&count=" + count + "&output=full&format=json";
 
-        console.log("Form submitted.\nqueryURL: " + queryURL + "\n\nSending query now.");
+        console.log("Form submitted.");
 
         $.ajax({url: queryURL,dataType: 'jsonp'}).done(function(data) {
-          console.log(data.petfinder.pets.pet[0]);
+          var len = data.petfinder.pets.pet.length; //this is NOT the same as $count; might ask for 25 pets and only get 2
+
+          for(var i=0;i<len;i++) {
+            console.log("\n\n\nPet #" + (i+1)); //human readable numbers are not zero-based
+            var tmpStatus = data.petfinder.pets.pet[i].status.$t;if(tmpStatus === 'A'){tmpStatus = "Active";}console.log(tmpStatus);
+            var tmpContactPhone = data.petfinder.pets.pet[i].contact.phone.$t;console.log(tmpContactPhone);
+            var tmpContactState = data.petfinder.pets.pet[i].contact.state.$t;console.log(tmpContactState);
+            var tmpContactEmail = data.petfinder.pets.pet[i].contact.email.$t;console.log(tmpContactEmail);
+            var tmpName = data.petfinder.pets.pet[i].name.$t;console.log(tmpName);
+            var tmpSex = data.petfinder.pets.pet[i].sex.$t;console.log(tmpSex);
+            var tmpDesc = data.petfinder.pets.pet[i].description.$t;console.log(tmpDesc);
+            var tmpID = data.petfinder.pets.pet[i].id.$t;console.log(tmpID);
+            var tmpShelterID = data.petfinder.pets.pet[i].shelterPetId.$t;console.log(tmpShelterID);
+
+          }
+          
         });
         console.log("Query sent.");
       });
