@@ -15,14 +15,6 @@ header {
 html {
   background: #cbec80;
 }
-label[for="searchlocation"] {
-   margin:2em;
-}
-
-label[for="searchanimal"] {
-   padding: 1em;
-}
-
-label[for="searchbreed"] {
-   padding: 1em;
+label {
+  padding: 2em;
 }
