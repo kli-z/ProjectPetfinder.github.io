@@ -45,7 +45,7 @@ $.noConflict(); //reserve $ namespace
                 "<li>Status: " + tmpStatus + "</li>" +
                 "<li>ID: " + tmpID + "</li>" +
                 "<li>Shelter ID: " + tmpShelterID + "</li>" +
-                "<li>Desc: " + tmpDesc + "</li>" +
+                "<li>Description: " + tmpDesc + "</li>" +
               "</ul>" +
               "<h4>Contact Info</h4>" +
               "<ul id=\"petContactInfo\">" +
