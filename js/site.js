@@ -60,7 +60,7 @@ $.noConflict(); //reserve $ namespace
                   "<li><h5>Age:</h5> " + tmpAge + "</li>" +
                   "<li><h5>Sex:</h5> " + tmpSex + "</li>" +
                   "<li><h5>Status:</h5> " + tmpStatus + "</li>" +
-                  "<li><h5>ID:</h5> " + tmpID + "</li>" +
+                  "<li><h5>ID:</h5> <a href=\"https://www.petfinder.com/petdetail/" + tmpID + "\">" + tmpID + "</a></li>" +
                   "<li><h5>Shelter ID:</h5> " + tmpShelterID + "</li>" +
                   "<li><h5>Description:</h5> " + tmpDesc + "</li>" +
                 "</ul>" +

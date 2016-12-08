@@ -59,6 +59,12 @@ label {
 main {
   margin: 0 0.493em 0 0.493em;
 }
+ul {
+
+}
+li {
+  margin: 0.79em 0em 0em 0em;
+}
 footer {
   background: #783818;
   color: #cbec80;
@@ -72,3 +78,4 @@ footer {
   border: 0.493em solid #503000;
   padding: 0.274em 0.274em 0.274em 0.274em;
 }
+
