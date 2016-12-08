@@ -16,7 +16,7 @@ form {
 h1 {
   color: #cbec80;
   font-family: serif;
-  font-size: 1.802em;
+  font-size: 1.802em; /* 32.44px */
   font-weight: 600;
   padding: 0em 0em 0.274em 0em;
   text-align: center;
@@ -36,10 +36,11 @@ header {
 }
 html {
   background: #cbec80;
+  font-size: 1.266em; /* 22.78px */ 
+  line-height: 2.027em; /* 36.49px = 2 gridlines */
 }
 label {
   font-family: 'Oxygen', sans-serif;
-  line-height: 2em;
   display: block;
   margin: auto;
 }
@@ -50,7 +51,7 @@ footer {
   background: #783818;
   color: #cbec80;
   font-family: 'Gidugu', sans-serif;
-  font-size: 1.602em;
+  font-size: 1.602em; /* 28.83px */
   padding: 0.274em 0 0.274em;
   text-align: center;
 }
