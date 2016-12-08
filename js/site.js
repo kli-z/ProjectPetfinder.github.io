@@ -29,7 +29,7 @@ $.noConflict(); //reserve $ namespace
             var tmpContactEmail = data.petfinder.pets.pet[i].contact.email.$t;
             var tmpContactZip = data.petfinder.pets.pet[i].contact.zip.$t;
             var tmpContactCity = data.petfinder.pets.pet[i].contact.city.$t;
-            var tmpStatus = data.petfinder.pets.pet[i].status.$t;if(tmpStatus === 'A'){tmpStatus = "Active";}
+            var tmpStatus = data.petfinder.pets.pet[i].status.$t;if(tmpStatus === "A"){tmpStatus = "Active";}
             var tmpName = data.petfinder.pets.pet[i].name.$t;
             var tmpSex = data.petfinder.pets.pet[i].sex.$t;
             var tmpDesc = data.petfinder.pets.pet[i].description.$t;
@@ -37,9 +37,24 @@ $.noConflict(); //reserve $ namespace
             var tmpShelterID = data.petfinder.pets.pet[i].shelterPetId.$t;
             var tmpAge = data.petfinder.pets.pet[i].age.$t;
 
+            //Let's give the user the largest image we can find, if we're only going to give them one.
+            var tmpPhotos = [];
+            var biggest = [0,""]; //number is the largest area, string is the url to that image
+
+            for(var j=0; j<data.petfinder.pets.pet[i].media.photos.photo.length; j++) { //j<10
+              tmpPhotos.push(data.petfinder.pets.pet[i].media.photos.photo[j].$t); //get the jth image into tmpPhotos
+              var tmpImage = new Image();tmpImage.src = tmpPhotos[j]; //make an image object of which we can query height and width
+              var tmpArea = (tmpImage.height * tmpImage.width); //calculate area
+              if(tmpArea > biggest[0]) { //if the area is larger than the previously largest area
+                biggest[1]=tmpPhotos[j]; //update biggest[1] with the url of the new largest image
+              }
+              console.log("\n" + tmpPhotos[j] + "\nbiggest[0] at step " + "[" + i + "]" + j + " is " + biggest[0] + "\nbiggest[1]: " + biggest[1]);
+            }
+
             $("#content").append(
               "<h4>Pet Info</h4>" +
               "<ul id=\"petInfo\">" +
+                "<li><img src=\"" + biggest[1] + "\" /></li>" +
                 "<li>Name: " + tmpName + "</li>" +
                 "<li>Age: " + tmpAge + "</li>" +
                 "<li>Sex: " + tmpSex + "</li>" +
@@ -66,14 +81,3 @@ $.noConflict(); //reserve $ namespace
 
 
 
-
-
-
-/* Commented-out */
-
-/*if $('#searchlocation').val() === "") { //if zipcode field is blank
-          //$('label').append('<b>Required</b>');
-        }
-        else {
-          //$('label').append('<b>Accepted</b>');
-        }*/
