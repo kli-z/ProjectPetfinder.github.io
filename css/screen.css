@@ -36,7 +36,9 @@ h3 {
   padding: 0 0 .274em 0;
 }
 h4 {
-  
+  font-weight: 600;
+   font-size: 1.424em;
+   padding: .274em;
 }
 h5 {
   font-weight: 600;
