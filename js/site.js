@@ -52,23 +52,25 @@ $.noConflict(); //reserve $ namespace
             }
 
             $("#content").append(
-              "<h4>Pet Info</h4>" +
-              "<ul id=\"petInfo\">" +
-                "<li><img src=\"" + biggest[1] + "\" /></li>" +
-                "<li>Name: " + tmpName + "</li>" +
-                "<li>Age: " + tmpAge + "</li>" +
-                "<li>Sex: " + tmpSex + "</li>" +
-                "<li>Status: " + tmpStatus + "</li>" +
-                "<li>ID: " + tmpID + "</li>" +
-                "<li>Shelter ID: " + tmpShelterID + "</li>" +
-                "<li>Description: " + tmpDesc + "</li>" +
-              "</ul>" +
-              "<h4>Contact Info</h4>" +
-              "<ul id=\"petContactInfo\">" +
-                "<li>Location: " + tmpContactCity + ", " + tmpContactState + ", " + tmpContactZip + "</li>" +
-                "<li>Email: " + tmpContactEmail + "</li>" +
-                "<li>Phone: " + tmpContactPhone + "</li>" +
-              "</ul>"
+              "<div class=\"petresult\">" +
+                "<h4>Pet Info</h4>" +
+                "<ul id=\"petInfo\">" +
+                  "<li><img src=\"" + biggest[1] + "\" /></li>" +
+                  "<li><h5>Name:</h5> " + tmpName + "</li>" +
+                  "<li><h5>Age:</h5> " + tmpAge + "</li>" +
+                  "<li><h5>Sex:</h5> " + tmpSex + "</li>" +
+                  "<li><h5>Status:</h5> " + tmpStatus + "</li>" +
+                  "<li><h5>ID:</h5> " + tmpID + "</li>" +
+                  "<li><h5>Shelter ID:</h5> " + tmpShelterID + "</li>" +
+                  "<li><h5>Description:</h5> " + tmpDesc + "</li>" +
+                "</ul>" +
+                "<h4>Contact Info</h4>" +
+                "<ul id=\"petContactInfo\">" +
+                  "<li><h5>Location:</h5> " + tmpContactCity + ", " + tmpContactState + ", " + tmpContactZip + "</li>" +
+                  "<li><h5>Email:</h5> " + tmpContactEmail + "</li>" +
+                  "<li><h5>Phone:</h5> " + tmpContactPhone + "</li>" +
+                "</ul>" +
+              "</div>"
             );
           }
         });

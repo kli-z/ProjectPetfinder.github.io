@@ -29,6 +29,17 @@ h2 {
   margin: auto;
   text-align: center; 
 }
+h3 {
+  font-size: /* 1.266em;  22.78px */ 
+  font-weight: 600;
+  margin: 2.281em 0em 0em 0em;
+}
+h4 {
+  
+}
+h5 {
+  font-weight: 600;
+}
 header {
   background: #783818;
   font-family: Helvetica;
@@ -36,8 +47,7 @@ header {
 }
 html {
   background: #cbec80;
-  /*font-size: 1.266em;  22.78px */ 
-  /*line-height: 2.027em;  36.49px = 2 gridlines */
+  /* line-height: 2.027em;  36.49px = 2 gridlines */
 }
 label {
   font-family: 'Oxygen', sans-serif;
@@ -47,7 +57,7 @@ label {
   margin: auto;
 }
 main {
-  margin: 0 0 0 0.493em;
+  margin: 0 0.493em 0 0.493em;
 }
 footer {
   background: #783818;
@@ -56,4 +66,9 @@ footer {
   font-size: 1.602em; /* 28.83px */
   padding: 0.274em 0 0.274em;
   text-align: center;
+}
+.petresult {
+  background-color: rgba(150,120,90,0.6);
+  border: 0.493em solid #503000;
+  padding: 0.274em 0.274em 0.274em 0.274em;
 }
