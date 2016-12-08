@@ -91,16 +91,15 @@ footer {
             /* desktop */
   label {
     display: inline-block;
-   
-}
-form {
- margin: 0.493em 0em 0.493em 0em;
-}
-h1 {
-  font-size: 3.427em; /* 54.832px */
-  font-weight: 900;
-}
-main {
-  margin: 0 1.602em 0 1.602em;
-}
+  }
+  form {
+    margin: 0.493em 0em 0.493em 0em;
+  }
+  h1 {
+    font-size: 3.427em; /* 54.832px */
+    font-weight: 900;
+  }
+  main {
+    margin: 0 1.602em 0 1.602em;
+  }
 }
