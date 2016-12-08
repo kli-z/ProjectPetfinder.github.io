@@ -83,7 +83,9 @@ footer {
   line-height: 1.266em;
   font-size: 1.424em;
 }
-
+#idDesc {
+   padding-bottom: 2.281em ;
+}
 
 @media only screen and (min-width: 1200px) {
             /* desktop */
