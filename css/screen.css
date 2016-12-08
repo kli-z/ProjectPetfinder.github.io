@@ -72,3 +72,11 @@ footer {
   border: 0.493em solid #503000;
   padding: 0.274em 0.274em 0.274em 0.274em;
 }
+
+@media only screen and (min-width: 1200px) {
+            /* desktop */
+  label {
+    display: inline-block;
+    
+   
+}
