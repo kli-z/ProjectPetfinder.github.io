@@ -36,11 +36,13 @@ header {
 }
 html {
   background: #cbec80;
-  font-size: 1.266em; /* 22.78px */ 
-  line-height: 2.027em; /* 36.49px = 2 gridlines */
+  /*font-size: 1.266em;  22.78px */ 
+  /*line-height: 2.027em;  36.49px = 2 gridlines */
 }
 label {
   font-family: 'Oxygen', sans-serif;
+  font-size: 1em;
+  line-height: 2.027em;
   display: block;
   margin: auto;
 }
