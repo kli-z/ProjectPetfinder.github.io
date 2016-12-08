@@ -1,11 +1,14 @@
 //site.js
 //Javascript file for ProjectPetfinder that queries the Petfinder database.
 
-console.log("Compiled");
-
 $.noConflict(); //reserve $ namespace
 (
   function($) {
+  /*chkUndef = function(param) {
+      if(param === "undefined") {
+        return "<em>None specified</em>"
+      }
+    } An attempt was made. */
     $(document).ready(function() {
 
       var APIkey = "dbc84ba782ca38e121f2d7c21d0b2787";
@@ -14,7 +17,7 @@ $.noConflict(); //reserve $ namespace
         event.preventDefault(); //prevents submit from reloading page and dumping stuff into the URL
         $('#content').empty();
         var specifics = [$("#searchlocation").val(), $("#searchanimal").val(), $("#searchbreed").val()];
-        var count = 5;
+        var count = 2;
         var queryURL = "https://api.petfinder.com/pet.find?key=" + APIkey +
           "&location=" + specifics[0] + "&animal=" + specifics[1] + "&breed=" + specifics[2] +
           "&count=" + count + "&output=full&format=json";
@@ -48,7 +51,7 @@ $.noConflict(); //reserve $ namespace
               if(tmpArea > biggest[0]) { //if the area is larger than the previously largest area
                 biggest[1]=tmpPhotos[j]; //update biggest[1] with the url of the new largest image
               }
-              console.log("\n" + tmpPhotos[j] + "\nbiggest[0] at step " + "[" + i + "]" + j + " is " + biggest[0] + "\nbiggest[1]: " + biggest[1]);
+              //console.log("\n" + tmpPhotos[j] + "\nbiggest[0] at step " + "[" + i + "]" + j + " is " + biggest[0] + "\nbiggest[1]: " + biggest[1]);
             }
 
             $("#content").append(
@@ -68,6 +71,7 @@ $.noConflict(); //reserve $ namespace
                 "<ul id=\"petContactInfo\">" +
                   "<li><h5>Location:</h5> " + tmpContactCity + ", " + tmpContactState + ", " + tmpContactZip + "</li>" +
                   "<li><h5>Email:</h5> " + tmpContactEmail + "</li>" +
+                //"<li><h5>Phone:</h5> " + chkUndef(tmpContactPhone) + "</li>" +
                   "<li><h5>Phone:</h5> " + tmpContactPhone + "</li>" +
                 "</ul>" +
               "</div>"
@@ -75,6 +79,7 @@ $.noConflict(); //reserve $ namespace
           }
         });
       });
+      //help button click
     });
   }
 )(jQuery); //pass "jQuery" in for $ instead of assuming
