@@ -51,7 +51,7 @@ html {
 }
 label {
   font-family: 'Oxygen', sans-serif;
-  font-size: 1em;
+  font-size: 1.424em;
   line-height: 2.027em;
   display: block;
   margin: auto;
@@ -78,6 +78,7 @@ footer {
   border: 0.493em solid #503000;
   padding: 0.274em 0.274em 0.274em 0.274em;
   line-height: 0.493em;
+  font-size: 1.424em;
 }
 
 
