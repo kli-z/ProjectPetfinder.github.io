@@ -89,3 +89,8 @@ footer {
 form {
  margin: 0.493em 0em 0.493em 0em;
 }
+h1 {
+  font-size: 3.427em; /* 54.832px */
+  font-weight: 900;
+}
+}
